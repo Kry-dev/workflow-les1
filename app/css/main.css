@@ -318,7 +318,7 @@ body{
 	padding: 0 30px;
 }
 .adress-item{
-	background-image: #f9f9f8;
+	background-color: #f9f9f8;
 	background-image: -moz-linear-gradient(top, #ffffff 0%, #f6f5f5 100%);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f6f5f5));
 	background-image: -webkit-linear-gradient(top, #ffffff 0%,#f6f5f5 100%);
@@ -339,7 +339,7 @@ body{
 }
 .adress-item-text{	
 	padding: 0 15px 0 80px;
-	color: ;
+	
 }
 .adress-item-link-wrap-mail{
 	background-image: url(../img/arrow-mail.png);
@@ -434,7 +434,7 @@ body{
 .photo-frame img{
 	width: 134px;
 	height: 134px;
-		overflow: hidden;
+	overflow: hidden;
 	border-radius: 50%;
 	display: inline-block;
 	vertical-align: middle;
