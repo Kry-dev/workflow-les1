@@ -1,0 +1,192 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1180px) {
+	.cotent{
+		max-width: 1180px;
+	}
+	.container{
+		width: 93%;
+	}
+	.mnu-button-wrap{
+		display: none;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.mnu-button-wrap{		display: block;	}
+	.container{		width: 96%;	}
+	.header-icons{		margin-right: 90px;	}
+	.nav-wrap{		display: none;	}
+	.page-wrap{	
+		float: left;
+		margin: 35px 30px;	
+		max-width: 100%;	
+	}
+	.tags-header{		width: 25%;	}
+	.tags-cell{		width: 75%;	}
+	.bottom-adress{		display: block;	}
+  	.adress-ul {    border-radius: 0; }
+  	.adress-item {
+    float: left;
+    width: 33.33333%;
+    border-radius: 0;
+	}
+  	.adress-item a {
+    color: inherit;
+    text-decoration: none;
+   }
+	.adress-item-link:first-child {
+    background-image: #f9f9f8;
+    background-image: -moz-linear-gradient(top, #ffffff 0%, #f6f5f5 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f6f5f5));
+    background-image: -webkit-linear-gradient(top, #ffffff 0%, #f6f5f5 100%);
+    background-image: -o-linear-gradient(top, #ffffff 0%, #f6f5f5 100%);
+    background-image: -ms-linear-gradient(top, #ffffff 0%, #f6f5f5 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #f6f5f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f5f5',GradientType=0 ); }
+	.adress-item:last-child{ border-radius: 0;}
+  	.menu_button_box {    display: block; }
+  	.lock_box {
+  		margin-left: 140px;
+  	} 
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.container{		width: 96%;	}
+	.mnu-button-wrap{		display: block;	}
+	.bottom-adress{		display: block;	}
+	.page-wrap{
+		max-width: 100%;
+		margin: 35px 0;	
+	}
+	/*Disable Animation on Mobile Devices*/
+	.mnu-button-wrap{		display: block;	}
+	.bottom-adress{		display: block;	}
+	.page-wrap{		margin: 35px 0;	}
+	.lock-box {		margin-left: 25px;	} 
+	/* index.html */
+	.photo-box{
+		float: none;
+		margin-left: 28%;
+		margin-bottom: 10px;
+	}
+	.about-me-box{
+		margin-left: 0;
+	}
+	.p-cont-header{
+		text-align: center;
+	}
+	.item-img-frame{ 
+		float: none;
+		margin: 5px auto;
+	}
+	.p-cont-info-item-box{
+		float: none;
+		text-align: center;
+		padding-left: 0;
+	}
+	.adress-item{
+		float: none;
+		width: 100%;
+	}
+	.footer-text{
+		float: right;
+		padding-right: 18px;
+		padding-left: 0;
+		font-size: 8px;
+		margin-left: 0;
+	}
+
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.header-icons{ display: none;}
+	.mnu-button-wrap{ display: block;}
+	.page-wrap{	margin: 0;}
+ 
+	/* index.html */
+	.photo-box{
+		float: none;
+		margin-left: 28%;
+		margin-bottom: 10px;
+	}
+	.about-me-box{
+		margin-left: 0;
+	}
+	.p-cont-header{
+		text-align: center;
+	}
+	.item-img-frame{ 
+		float: none;
+		margin: 5px auto;
+	}
+	.p-cont-info-item-box{
+		float: none;
+		text-align: center;
+		padding-left: 0;
+	}
+	.adress-item{
+		float: none;
+		width: 100%;
+	}
+	.bottom-adress{	display: block;}
+	.footer-icons{
+		display: block;
+		float: none;
+		text-align: center;
+	}
+	.lock-box {	margin-left: 25px;}
+	.footer-text{
+		float: right;
+		padding-right: 18px;
+		padding-left: 0;
+		font-size: 8px;
+		margin-left: 0;
+	}
+	
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	.mnu-button-wrap{		display: block;	}
+	.bottom-adress{		display: block;	}
+	.page-wrap{		margin: 0;	}
+	.lock_box {
+		margin-left: 25px;
+	} 
+
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 321px) {
+	.container{	min-width: 96%;	}
+	.content{ min-width: auto;}
+	.page-wrap{	margin: 0;	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 481px) {
+	.page-wrap{		
+		float: none;
+		margin: 35px 0;	}
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width : 769px) {
+	.content{ min-width: 90%;}
+	.page-wrap{	margin: 35px 0;	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 993px) {
+	.bottom-adress{	display: none;	}
+	.container{	width: 84%;	}
+	.page-wrap{	margin: 24px 0;	}
+	.mnu-button-wrap{ display: none;}
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1201px) {
+	.bottom-adress{	display: none;	}
+	.container{	width: 80%;	}
+	.page-wrap{	float: right;	}
+	.mnu-button-wrap{ display: none;	}
+}
