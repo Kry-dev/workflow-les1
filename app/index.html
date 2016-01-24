@@ -14,19 +14,18 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="favicon.png">
 	<!-- CSS -->
-	<link rel="stylesheet" href="bower/normalize­css/normalize.css">
-	<link rel="stylesheet" href="app/bower/html5shiv/dist/html5shiv.js">
+	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/media.css">
-	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/fonts.css"> -->
 	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	  <![endif]-->
-		<!-- JS -->
-	<script src="bower/html5shiv/dist/html5shiv.js"></script>  
+	  <!-- JS -->
+	  <script src="bower/html5shiv/dist/html5shiv.js"></script>  
 	</head>
 	<body>
 		<header class="header">
@@ -44,7 +43,7 @@
 				</ul>
 				<div class="mnu-button-wrap">
 					<img class="mnu-button" src="img/mnu-button.png" alt="Кнопка меню">
-					<div class="arrow-up hide "></div>
+					<div class="arrow-up hide"></div>
 					<nav class="nav-mnu-head hide">
 						<ul class="nav-mnu-head-ul">
 							<li class="nav-mnu-head-li active">
@@ -61,6 +60,23 @@
 				</div>
 			</div>
 		</header>
+		<div class="login-popup">
+			<div class="login-form">
+				<p class="login-form-close-box">
+					<span class="login-form-header">Авторизируйтесь</span>
+					<span class="login-form-window-close-x">X</span>
+				</p>
+				<form>
+					<input class="login-text-input login-text-input-email" placeholder="Введите e-mail" type="text" required="">
+					<input class="login-text-input login-text-input-pass" placeholder="Введите пароль" type="text" required="">
+					<p class="login-checkbox-input-box">
+						<input class="login-checkbox-input" type="checkbox">
+						<span class="login-checkbox-input-text">Запомнить меня?</span>
+					</p>
+					<input class="login-button-input" type="button" value="Войти">
+				</form>			
+			</div>
+		</div>
 		<main class="content">
 			<div class="container">
 				<div class="row">
@@ -259,16 +275,18 @@
 						</div>
 					</div>
 				</main>
-			<footer class="footer">
-				<div class="footer-content">
-					<div class="lock-box">
+				<footer class="footer">
+					<div class="footer-content">
+						<div class="lock-box">
+						</div>
+						<span class="lock-text">Вход</span>
+						<span class="footer-text">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
 					</div>
-					<span class="lock-text">Вход</span>
-					<span class="footer-text">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
-				</div>
-			</footer>	
-			<script src="app/bower/jquery"></script>
-			<!-- my JS -->
-			<script src="js/main.js"></script>
-		</body>
-		</html>
+				</footer>	
+
+				<!-- my JS -->
+				<script src="bower/jquery/dist/jquery.js"></script>
+				<!-- <script src="http://code.jquery.com/jquery-1.8.3.js"></script> -->
+				<script src="js/main.js"></script>
+			</body>
+			</html>

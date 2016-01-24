@@ -5,21 +5,21 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 7px;
   display: inline-block;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-bottom: 22px;
+  margin-right: 24px;
+  margin-left: 5px;
+  margin-bottom: 33px;
   vertical-align: top;
   overflow: hidden; 
 }
 .p-portfolio-box{
-	padding-top: 21px;
+	padding-top: 8px;
 	padding-bottom: 50px;
 }
 .my-work-img-box{
   margin: 0;
   padding: 0;
   line-height: 0;
-  height: 118px;
+  height: 120px;
   overflow: hidden;
   border-radius: 7px 7px 0 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -72,11 +72,11 @@
   font-weight: 600; 
 }
 .my-work-descr {
-  font-size: 13px;
+  font-size: 12px;
   vertical-align: middle;
   text-align: center;
-  line-height: 20px;
-  margin: 10px 7px;
+  line-height: 16px;
+  margin: 7px 5px;
   border-radius: 0 0 7px 7px; 
 }
 .add-project-box {

@@ -23,16 +23,23 @@
 		margin: 35px 30px;	
 		max-width: 100%;	
 	}
-	.tags-header{		width: 25%;	}
-	.tags-cell{		width: 75%;	}
-	.bottom-adress{		display: block;	}
-  	.adress-ul {    border-radius: 0; }
-  	.adress-item {
+	.p-cont-box{
+		padding: 10px 20px;
+		text-align: left;
+	}
+	.tags-header{		width: 155px;	}
+	.tags-cell{	min-width: 240px;	}
+	.bottom-adress{		
+		display: block;
+		padding-bottom: 35px;
+	}
+  .adress-ul {    border-radius: 0; }
+  .adress-item {
     float: left;
     width: 33.33333%;
     border-radius: 0;
 	}
-  	.adress-item a {
+  .adress-item a {
     color: inherit;
     text-decoration: none;
    }
@@ -46,13 +53,12 @@
     background-image: linear-gradient(to bottom, #ffffff 0%, #f6f5f5 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f5f5',GradientType=0 ); }
 	.adress-item:last-child{ border-radius: 0;}
-  	.menu_button_box {    display: block; }
-  	.lock_box {
-  		margin-left: 140px;
-  	} 
+  .menu_button_box {    display: block; }
+  .lock_box {  margin-left: 140px;  } 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.logo-wrap{	margin-left: 30px;}
 	.container{		width: 96%;	}
 	.mnu-button-wrap{		display: block;	}
 	.bottom-adress{		display: block;	}
@@ -61,20 +67,20 @@
 		margin: 35px 0;	
 	}
 	/*Disable Animation on Mobile Devices*/
-	.mnu-button-wrap{		display: block;	}
-	.bottom-adress{		display: block;	}
-	.page-wrap{		margin: 35px 0;	}
 	.lock-box {		margin-left: 25px;	} 
 	/* index.html */
 	.photo-box{
 		float: none;
-		margin-left: 28%;
+		margin-left: 35%;
 		margin-bottom: 10px;
 	}
 	.about-me-box{
 		margin-left: 0;
 	}
 	.p-cont-header{
+		text-align: center;
+	}
+	.p-cont-box{
 		text-align: center;
 	}
 	.item-img-frame{ 
@@ -85,6 +91,7 @@
 		float: none;
 		text-align: center;
 		padding-left: 0;
+		max-width: 100%;
 	}
 	.adress-item{
 		float: none;
@@ -101,14 +108,20 @@
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+
 	.header-icons{ display: none;}
 	.mnu-button-wrap{ display: block;}
+	.container{
+		min-width: 90%;
+	}
+	.content{ padding-bottom: 38px;	}
 	.page-wrap{	margin: 0;}
- 
-	/* index.html */
+	.page-content{
+		margin-bottom: 20px;
+	}
 	.photo-box{
 		float: none;
-		margin-left: 28%;
+		margin-left: 25%;
 		margin-bottom: 10px;
 	}
 	.about-me-box{
@@ -116,54 +129,83 @@
 	}
 	.p-cont-header{
 		text-align: center;
+		padding: 15px;
+		font-weight: 400;
 	}
 	.item-img-frame{ 
 		float: none;
 		margin: 5px auto;
 	}
+	.tags-cell{
+		float: none;
+		min-width: 190px;
+		max-width: 200px;
+	}
+	.p-cont-box{
+		padding: 5px 15px;
+	}
 	.p-cont-info-item-box{
 		float: none;
 		text-align: center;
-		padding-left: 0;
 	}
 	.adress-item{
 		float: none;
 		width: 100%;
 	}
-	.bottom-adress{	display: block;}
+	.bottom-adress{	
+		display: block;
+		padding: 0;
+	}
+	.footer{
+		height: 38px;
+		line-height: 38px;
+		margin-top: -38px;
+	}
+	.footer-content{
+		height: 38px;
+		line-height: 38px;
+	}
 	.footer-icons{
 		display: block;
 		float: none;
 		text-align: center;
 	}
-	.lock-box {	margin-left: 25px;}
+	.footer-icons li {
+		line-height: 60px;
+	}
+	.lock-box {	margin-left: 0;}
+	.lock-text {
+		margin: 0;
+		font-size: 8px;
+	}
 	.footer-text{
 		float: right;
-		padding-right: 18px;
-		padding-left: 0;
+		padding: 2px 0 0;
 		font-size: 8px;
 		margin-left: 0;
 	}
-	
+	.page-wrap .contacts-box{
+		margin: 10px auto;
+		width: 100%;
+	}
+	.name-and-mail-wrap:first-child .name-wrap,
+	.name-and-mail-wrap:first-child .mail-wrap{
+		float: none;
+		width: 100%;
+		display: block;
+	}
+
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-	.mnu-button-wrap{		display: block;	}
-	.bottom-adress{		display: block;	}
-	.page-wrap{		margin: 0;	}
-	.lock_box {
-		margin-left: 25px;
-	} 
-
 }
 
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
-@media only screen and (min-width : 321px) {
-	.container{	min-width: 96%;	}
+@media only screen and (min-width : 320px) {
 	.content{ min-width: auto;}
-	.page-wrap{	margin: 0;	}
+	.page-wrap{	margin: 20px 0 0;	}
 }
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 481px) {
@@ -187,6 +229,6 @@
 @media only screen and (min-width : 1201px) {
 	.bottom-adress{	display: none;	}
 	.container{	width: 80%;	}
-	.page-wrap{	float: right;	}
+	.page-wrap{	float: left;	}
 	.mnu-button-wrap{ display: none;	}
 }

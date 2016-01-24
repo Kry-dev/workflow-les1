@@ -1,3 +1,6 @@
+.p-cont-box{
+  padding: 13px 10px 30px 38px;
+}
 .contacts-box {
   min-height: 100px;
   width: 402px;
@@ -6,7 +9,7 @@
 .name-and-mail-wrap {  margin-bottom: 13px; }
 .name-wrap {
   float: left;
-  width: 47%; }
+  width: 48%; }
 
 .mail-wrap {
   float: right;
@@ -29,21 +32,22 @@
   background: -o-linear-gradient(top, #fbfcfd 0%, #f4f3f4 100%);
   background: -ms-linear-gradient(top, #fbfcfd 0%, #f4f3f4 100%);
   background: linear-gradient(to bottom, #fbfcfd 0%, #f4f3f4 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfcfd', endColorstr='#f4f3f4',GradientType=0 ); }
-
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfcfd', endColorstr='#f4f3f4',GradientType=0 ); 
+}
 .cont-item-header {
-  margin: 0 0 7px 0;
-  font-size: 14px; }
-
+  text-align: left;
+  margin: 0 0 5px 0;
+  font-size: 14px; 
+}
 .message-textarea {
   font-size: 12px;
   border-radius: 4px;
   display: block;
-  padding-top: 9px;
+  padding-top: 5px;
   width: 100%;
   resize: none;
   box-sizing: border-box;
-  margin-bottom: 13px;
+  margin-bottom: 17px;
   background: #fbfcfd;
   background: -moz-linear-gradient(top, #fbfcfd 0%, #f4f3f4 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbfcfd), color-stop(100%, #f4f3f4));
@@ -85,7 +89,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfcfd', endColorstr='#f4f3f4',GradientType=0 ); }
 
 .cont-button-input {
-  margin: 0 auto;
+  margin: 19px auto;
   display: block;
   font-size: 14px;
   font-weight: 600;

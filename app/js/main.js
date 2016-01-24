@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 	
 	// Проверка наличия JS, jQuery.
@@ -17,11 +16,4 @@ $(document).ready(function() {
 
 	openCloseMenu();
 
-	closeSucsessWindow();
-
-	addProject();
-
-	addProjectPopup();
-
-	openCloseAuthPopup();
 });	
