@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 For installing this progect you should have Node.js + Npm and Bower, globaly installed on your computer.
 
 If you have this, for installing project:
@@ -8,3 +9,6 @@ If you have this, for installing project:
 3. Enter "cd site"
 4. Enter "bower i"
 5  Enter "npm i"
+=======
+# workflow-les1
+>>>>>>> ab53124dcab22d803169744e4010307e21eb6c72
