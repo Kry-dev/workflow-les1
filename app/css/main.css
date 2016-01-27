@@ -12,7 +12,10 @@ body{
 body{
 	font: 100%/ 1.5em "Open Sans", sans-serif;
 	color: #727070;
-	background: url(../img/bg.jpg) repeat-y top center;
+	background-image: url(../img/bg.jpg);
+	background-color: #bcecb0;
+	background-position: top center;
+	background-repeat: repeat-y;
 	background-size: cover;
 }
 /*Fonts*/
@@ -22,15 +25,18 @@ body{
 .uppercase{
 	text-transform: uppercase;
 }
-
 /* МОЯ СЕТКА ПО УРОКУ: https://www.youtube.com/watch?v=txOKjSEwHVM */
-.hide{
-	display: none;
-}
+.hide{	display: none;}
+.hide-text{	font-size: 0;}
 .container{
 	width: 98%;
 	margin: 0 auto;
+	position: relative;
 }	
+/*.container .row{
+	width: 100%;
+	margin: 0 auto;
+}
 .container .cols{
 	float: left;
 	margin: 0 0 1em;
@@ -44,12 +50,12 @@ body{
 .container .cols.col-5 {width: 41.6666666667% ;}
 .container .cols.col-6 {width: 50% ;}
 .container .cols.col-7 {width: 50.3333333333% ;}
-.container .cols.col-8 {width: 68.6666666667% ;}
+.container .cols.col-8 {width: 66.6666666667% ;}
 .container .cols.col-9 {width: 75% ;}
 .container .cols.col-10 {width: 83.333333333% ;}
 .container .cols.col-11 {width: 91.666666667% ;}
 .container .cols.col-12 {width: 100% ;}
-
+*/
 /*CLEARFIX*/
 .container:before,
 .container:after,
@@ -69,6 +75,7 @@ body{
  /*INDEX CSS*/ 
 .header{	
 	width: 100%;
+	margin-bottom: 35px;
 	background: url(../img/header-bg.jpg) repeat-x;
 }
 .header:after{
@@ -93,11 +100,12 @@ body{
  	height: 71px;
  	vertical-align: middle;
 }
-.header-icons, 
-.footer-icons{
+.header-icons{
+	position: absolute;
+	right: 10px;
+	top: 22px;
  	display: block;
  	float: right;
- 	margin-right: 10px;
 }
 .footer-icons{
 	display: none;
@@ -106,7 +114,6 @@ body{
 .footer-icons li{
 	display: inline-block;
 	list-style: none;
-	line-height: 90px;
 }
 .icon-wrap{
  	width: 38px;
@@ -116,6 +123,7 @@ body{
 	background: url(../img/icons.png) no-repeat;
 	margin-left: 10px;
 	cursor: pointer;
+	font-size: 16px;
 }
 .icon-wrap.icon-fb{	background-position: 0 0;}
 .icon-wrap.icon-vk{	background-position: 0 -240px;}
@@ -274,7 +282,6 @@ body{
   right: 13px;
   top: 76px; 
 }
-
 .nav-mnu-head-ul {
   padding: 0;
   margin: 0;
@@ -344,12 +351,11 @@ body{
 }
 /* NAV MENU*/
 .nav-wrap{	
-	float: left;
 	min-width: 250px;
-	display: block;
+	display: inline-block;
 }
 .nav-mnu{
-	margin: 35px 0;
+	margin-bottom: 35px;
 	box-shadow: 0 2px 2px 0px rgba(0,0,0,0.1);
 	border-radius: 5px;
 	max-width: 250px;
@@ -374,15 +380,15 @@ body{
 	font-weight: 600;
 	cursor: pointer;
 	border: 1px solid rgba(0, 0, 0, 0.2);
-  background-clip: border-box;
-  background: #f0eeed;
-  background: -moz-linear-gradient(top, #fbfafa 0%, #e5e3e2 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbfafa), color-stop(100%, #e5e3e2));
-  background: -webkit-linear-gradient(top, #fbfafa 0%, #e5e3e2 100%);
-  background: -o-linear-gradient(top, #fbfafa 0%, #e5e3e2 100%);
-  background: -ms-linear-gradient(top, #fbfafa 0%, #e5e3e2 100%);
-  background: linear-gradient(to bottom, #fbfafa 0%, #e5e3e2 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfafa', endColorstr='#e5e3e2',GradientType=0 );
+	background-clip: border-box;
+	background: #f0eeed;
+	background: -moz-linear-gradient(top, #fbfafa 0%, #e5e3e2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbfafa), color-stop(100%, #e5e3e2));
+	background: -webkit-linear-gradient(top, #fbfafa 0%, #e5e3e2 100%);
+	background: -o-linear-gradient(top, #fbfafa 0%, #e5e3e2 100%);
+	background: -ms-linear-gradient(top, #fbfafa 0%, #e5e3e2 100%);
+	background: linear-gradient(to bottom, #fbfafa 0%, #e5e3e2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfafa', endColorstr='#e5e3e2',GradientType=0 );
 
 }
 .nav-mnu li a:hover{
@@ -404,11 +410,12 @@ body{
 	background: -ms-linear-gradient(top, #7ce7cd 0%,#40b89a 100%);
 	background: linear-gradient(to bottom, #7ce7cd 0%,#40b89a 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ce7cd', endColorstr='#40b89a',GradientType=0 );
-	
 }
 /* ADRESS BOX*/
+.adress,
 .adress-ul{
 	display: block;
+	max-width: 250px;
 }
 .adress-ul li{
 	list-style: none;
@@ -455,39 +462,41 @@ body{
 	font-size: 14px;
 	display: block;
 	cursor: pointer;
+	position: relative;
+}
+.adress-item:after{
+	position: absolute;
+	content: url(../img/arrow.png);
+	display: block;
+	left: 40px;
+	top: -1px;
+	height: 36px;
+	width: 11px;
+	overflow: hidden;
 }
 .adress-item-link{
 	display: block;
 	color: inherit;
 	text-decoration: none;
+	text-align: left;
+	padding: 0 15px 0 60px;
+	overflow: hidden;
+	position: relative;
 }
-.adress-item-text{	
-	padding: 0 15px 0 80px;
-	
-}
-.adress-item-link-wrap-mail{
-	background-image: url(../img/arrow-mail.png);
+.adress-item-link:before{
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 13px;
+	background-image: url(../img/adress-icons.png);
 	background-repeat: no-repeat;
-	background-position: left center;
-	height: 100%;
-	float: left;
+	height: 20px;
+	width: 20px;
 }
-.adress-item-link-wrap-phone{
-	background-image: url(../img/arrow-phone.png);
-	background-repeat: no-repeat;
-	background-position: left center;
-	height: 100%;
-	width: 96px;
-	float: left;
-}
-.adress-item-link-wrap-skype{
-	background-image: url(../img/arrow-skype.png);
-	background-repeat: no-repeat;
-	background-position: left center;
-	height: 100%;
-	width: 96px;
-	float: left;
-}	
+.adress-item-link.link-mail:before{ background-position: -20px 0;}
+.adress-item-link.link-phone:before{ background-position: -40px 0;}
+.adress-item-link.link-skype:before{ background-position: 0 0;}
+
 .adress-item:hover{
 	background: #f7f0e2;
 	background: -moz-linear-gradient(top,  #ffffff 0%, #f3e8d4 100%);
@@ -502,7 +511,7 @@ body{
 .adress-item:last-child{ border-radius: 0 0 5px 5px;}
 .page-wrap{
 	float: right;
-	margin: 35px 0 0;
+	display: inline-block;
 	max-width: 650px;
 }
 .page-content{
@@ -540,13 +549,9 @@ body{
 	padding: 30px 10px 30px 38px;
 	text-align: left;
 }
-.p-cont-info{
-	margin: 0 auto;
-}
-.photo-box{
-	float: left;
-}
+.p-cont-info{	margin: 0 auto;}
 .photo-frame{
+	float: left;
 	width: 154px;
 	height: 154px;
 	background: #f6f5f5;
@@ -554,7 +559,7 @@ body{
 	border-radius: 50%;
 	text-align: center;
 	line-height: 148px;
-	margin-top: 5px;
+	margin-right: 40px;
 }
 .photo-frame img{
 	width: 134px;
@@ -565,16 +570,29 @@ body{
 	vertical-align: middle;
 }
 .about-me-box{
-	margin-left: 190px;
-	text-align: left;
+	float: left;
+	width: 400px;
 }
-.about-me-info{
+.about-item{
+	list-style: none;
+	margin: 0 0 8px;
+	padding: 0;
+}
+.about-item:last-child{
+	margin-bottom: 22px;
+}
+.about-what{
+	float: left;
 	font-size: 14px;
 	line-height: 21px;
 	padding-bottom: 6px;
 }
-.about-me-info:last-child{
-	margin-bottom: 22px;
+.about-info{
+	float: left;
+	text-align: left;
+	margin-left: 15px;
+	max-width: 220px;
+	overflow: hidden;
 }
 .tags-box{
 	width: 100%;

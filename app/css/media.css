@@ -19,8 +19,6 @@
 	.header-icons{		margin-right: 90px;	}
 	.nav-wrap{		display: none;	}
 	.page-wrap{	
-		float: left;
-		margin: 35px 30px;	
 		max-width: 100%;	
 	}
 	.p-cont-box{
@@ -33,7 +31,10 @@
 		display: block;
 		padding-bottom: 35px;
 	}
-  .adress-ul {    border-radius: 0; }
+  .adress-ul {
+    border-radius: 0;
+		min-width: 100%;
+   }
   .adress-item {
     float: left;
     width: 33.33333%;
@@ -64,12 +65,11 @@
 	.bottom-adress{		display: block;	}
 	.page-wrap{
 		max-width: 100%;
-		margin: 35px 0;	
 	}
 	/*Disable Animation on Mobile Devices*/
 	.lock-box {		margin-left: 25px;	} 
 	/* index.html */
-	.photo-box{
+	.photo-frame{
 		float: none;
 		margin-left: 35%;
 		margin-bottom: 10px;
@@ -115,16 +115,16 @@
 		min-width: 90%;
 	}
 	.content{ padding-bottom: 38px;	}
-	.page-wrap{	margin: 0;}
 	.page-content{
 		margin-bottom: 20px;
 	}
-	.photo-box{
+	.photo-frame{
 		float: none;
 		margin-left: 25%;
 		margin-bottom: 10px;
 	}
 	.about-me-box{
+		width: 100%;
 		margin-left: 0;
 	}
 	.p-cont-header{
@@ -203,20 +203,19 @@
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
+@media only screen and (min-width : 300px) {
 	.content{ min-width: auto;}
-	.page-wrap{	margin: 20px 0 0;	}
+	.page-wrap{
+		display: block;
+		float: none;
+	}
 }
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 481px) {
-	.page-wrap{		
-		float: none;
-		margin: 35px 0;	}
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width : 769px) {
 	.content{ min-width: 90%;}
-	.page-wrap{	margin: 35px 0;	}
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 993px) {

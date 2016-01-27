@@ -34,23 +34,24 @@
 				<div class="logo-wrap">
 					<a href="index.html">
 						<img src="img/logo.png" alt="LostSchool logo">
+						<span class="hide-text">LostSchool logo</span>
 					</a>
 				</div>
 				<ul class="header-icons">
-					<li><a href="https://www.facebook.com" target="_blank"><span class="icon-wrap icon-fb"></span></a></li>
-					<li><a href="https://vk.com" target="_blank"><span class="icon-wrap icon-vk"></span></a></li>
-					<li><a href="https://www.twitter.com" target="_blank"><span class="icon-wrap icon-tw"></span></a></li>
-					<li><a href="https://github.com" target="_blank"></a><span class="icon-wrap icon-git"></span></li>
+					<li><a href="https://www.facebook.com" class="icon-wrap icon-fb" target="_blank"><span class="hide-text">icon-fb</span></a></li>
+					<li><a href="https://vk.com" target="_blank" class="icon-wrap icon-vk"><span class="hide-text">icon-vk</span></a></li>
+					<li><a href="https://www.twitter.com" target="_blank" class="icon-wrap icon-tw"><span class="hide-text">icon-tw</span></a></li>
+					<li><a href="https://github.com" target="_blank" class="icon-wrap icon-git"></a><span class="hide-text">icon-git</span></li>
 				</ul>
 				<div class="mnu-button-wrap">
 					<img class="mnu-button" src="img/mnu-button.png" alt="Кнопка меню">
-					<div class="arrow-up hide "></div>
+					<div class="arrow-up hide"></div>
 					<nav class="nav-mnu-head hide">
 						<ul class="nav-mnu-head-ul">
 							<li class="nav-mnu-head-li">
 								<a href="index.html">Обо мне</a>
 							</li>
-							<li class="nav-mnu-head-li" >
+							<li class="nav-mnu-head-li ">
 								<a href="portfolio.html">Мои работы</a>
 							</li>
 							<li class="nav-mnu-head-li active">
@@ -63,150 +64,128 @@
 		</header>
 		<main class="content">
 			<div class="container">
-				<div class="row">
-					<div class="col-4">
-						<div class="nav-wrap">
-							<div class="nav-mnu">
-								<ul class="nav-mnu-ul">
-									<li><a href="index.html" >Обо мне</a></li>
-									<li><a href="portfolio.html">Мои работы</a></li>
-									<li><a href="contacts.html" class="active">Обратная связь</a></li>
-								</ul>
-							</div>
-							<adress class="adress">
-								<ul class="adress-ul">
-									<li class="adress-header">Контакты</li>
-									<li class="adress-item clear">
-										<a class="adress-item-link" href="mailto:yaroslavkryvda@gmail.com">
-											<div class="adress-item-link-wrap">
-												<div class="adress-item-link-wrap-mail">
-													<span class="adress-item-text">y.kryvda@gmail.com</span>
-												</div>
+				<div class="nav-wrap">
+					<div class="nav-mnu">
+						<ul class="nav-mnu-ul">
+							<li><a href="index.html" >Обо мне</a></li>
+							<li><a href="portfolio.html" >Мои работы</a></li>
+							<li><a href="contacts.html" class="active">Обратная связь</a></li>
+						</ul>
+					</div>
+					<adress class="adress">
+						<ul class="adress-ul">
+							<li class="adress-header">Контакты</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-mail" href="mailto:yaroslavkryvda@gmail.com">yaroslavkryvda@gmail.com</a>
+							</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-phone" href="tel:+380979999999">+380979999999</a>
+							</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-skype" href="skype:yarik890105">yarik890105</a>
+							</li>	
+						</ul>
+					</adress> 
+				</div>
+				<div class="page-wrap">
+					<section class="page-content">
+						<h2 class="p-cont-header">У вас интересный проект? Напишите мне</h2>
+						<div class="p-cont-box">
+							<div class="contacts-box clear">
+								<form id="cont-form" method="GET" action="" novalidate="novalidate">
+									<div class="name-and-mail-wrap clear">
+										<div class="name-wrap">
+											<p class="cont-item-header">Имя</p>
+											<div class="cont-input-wrap">
+												<input id="cont-form-name" name="cont-form-name" class="name-mail-input" type="text" placeholder="Как к вам обращаться" required="" aria-required="true">
 											</div>
-										</a>
-									</li>
-									<li class="adress-item clear">
-										<a class="adress-item-link" href="tel:+79812342323">
-											<div class="adress-item-link-wrap">
-												<div class="adress-item-link-wrap-phone">
-													<span class="adress-item-text">+79812342323</span>
-												</div>
+										</div>
+										<div class="mail-wrap">
+											<p class="cont-item-header">Email</p>
+											<div class="cont-input-wrap">	
+												<input id="cont-form-mail" name="cont-form-mail" class="name-mail-input" type="email" placeholder="Куда мне писать" required="" aria-required="true">
 											</div>
-										</a>
-									</li>
-									<li class="adress-item clear">
-										<a class="adress-item-link" href="skype:yarik890105">
-											<div class="adress-item-link-wrap">
-												<div class="adress-item-link-wrap-skype">
-													<span class="adress-item-text">yarik890105</span>
-												</div>
-											</div>
-										</a>
-									</ul>
-								</adress>
-							</div>
-						</div>
-						<div class="col-8">
-							<div class="page-wrap">
-								<section class="page-content">
-									<h2 class="p-cont-header">У вас интересный проект? Напишите мне</h2>
-									<div class="p-cont-box">
-										<div class="contacts-box clear">
-											<form id="cont-form" method="GET" action="" novalidate="novalidate">
-												<div class="name-and-mail-wrap clear">
-													<div class="name-wrap">
-														<p class="cont-item-header">Имя</p>
-														<div class="cont-input-wrap">
-															<input id="cont-form-name" name="cont-form-name" class="name-mail-input" type="text" placeholder="Как к вам обращаться" required="" aria-required="true">
-														</div>
-													</div>
-													<div class="mail-wrap">
-														<p class="cont-item-header">Email</p>
-														<div class="cont-input-wrap">	
-															<input id="cont-form-mail" name="cont-form-mail" class="name-mail-input" type="email" placeholder="Куда мне писать" required="" aria-required="true">
-														</div>
-													</div>
-												</div>
-												<p class="cont-item-header">Сообщение</p>
-												<div class="cont-input-wrap">
-													<textarea id="cont-form-message" class="message-textarea" name="cont-form-message" placeholder="Кратко в чем суть" rows="7" required="" aria-required="true"></textarea>
-												</div>
-												<p class="cont-item-header">Введите код, указанный на картинке</p>
-												<div class="name-and-mail-wrap clear">
-													<div class="name-wrap">
-														<div class="capcha-box">КАПЧА!</div>
-													</div>
-													<div class="mail-wrap">
-														<div class="cont-input-wrap">
-															<input class="code-input" name="cont-form-capcha" id="cont-form-capcha" type="text" placeholder="Введите код" required="" aria-required="true">
-														</div>
-													</div>
-												</div>
-												<div class="name-and-mail-wrap clear">
-													<div class="name-wrap">
-														<input class="cont-button-input green-button" type="submit" name="submit" value="Отправить">
-													</div>
-													<div class="mail-wrap">
-														<input class="cont-button-input light-button clear-button" type="reset" value="Очистить">
-													</div>
-												</div>
-											</form>
 										</div>
 									</div>
-								</section>
-								<adress class="bottom-adress">
-									<ul class="adress-ul">
-									<li class="adress-item clear">
-										<a class="adress-item-link" href="mailto:yaroslavkryvda@gmail.com">
-											<div class="adress-item-link-wrap">
-												<div class="adress-item-link-wrap-mail">
-													<span class="adress-item-text">y.kryvda@gmail.com</span>
-												</div>
+									<p class="cont-item-header">Сообщение</p>
+									<div class="cont-input-wrap">
+										<textarea id="cont-form-message" class="message-textarea" name="cont-form-message" placeholder="Кратко в чем суть" rows="7" required="" aria-required="true"></textarea>
+									</div>
+									<p class="cont-item-header">Введите код, указанный на картинке</p>
+									<div class="name-and-mail-wrap clear">
+										<div class="name-wrap">
+											<div class="capcha-box">КАПЧА!</div>
+										</div>
+										<div class="mail-wrap">
+											<div class="cont-input-wrap">
+												<input class="code-input" name="cont-form-capcha" id="cont-form-capcha" type="text" placeholder="Введите код" required="" aria-required="true">
 											</div>
-										</a>
-									</li>
-									<li class="adress-item clear">
-										<a class="adress-item-link" href="tel:+79812342323">
-											<div class="adress-item-link-wrap">
-												<div class="adress-item-link-wrap-phone">
-													<span class="adress-item-text">+79812342323</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li class="adress-item clear">
-										<a class="adress-item-link" href="skype:yarik890105">
-											<div class="adress-item-link-wrap">
-												<div class="adress-item-link-wrap-skype">
-													<span class="adress-item-text">yarik890105</span>
-												</div>
-											</div>
-										</a>
-									</ul>
-								</adress>
-									<ul class="footer-icons">
-										<li><a href="https://www.facebook.com" target="_blank"><span class="icon-wrap icon-fb"></span></a></li>
-										<li><a href="https://vk.com" target="_blank"><span class="icon-wrap icon-vk"></span></a></li>
-										<li><a href="https://www.twitter.com" target="_blank"><span class="icon-wrap icon-tw"></span></a></li>
-										<li><a href="https://github.com" target="_blank"></a><span class="icon-wrap icon-git"></span></li>
-									</ul>
-								</div>
+										</div>
+									</div>
+									<div class="name-and-mail-wrap clear">
+										<div class="name-wrap">
+											<input class="cont-button-input green-button" type="submit" name="submit" value="Отправить">
+										</div>
+										<div class="mail-wrap">
+											<input class="cont-button-input light-button clear-button" type="reset" value="Очистить">
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
-					</div>
-				</main>
-				<footer class="footer">
-					<div class="footer-content">
-						<div class="lock-box">
-						</div>
-						<span class="lock-text">Вход</span>
-						<span class="footer-text">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
-					</div>
-				</footer>	
-
-				<!-- my JS -->
-				<script src="bower/jquery/dist/jquery.js"></script>
-				<!-- <script src="http://code.jquery.com/jquery-1.8.3.js"></script> -->
-				<script src="js/main.js"></script>
-			</body>
-			</html>
+					</section>
+					<adress class="bottom-adress">
+						<ul class="adress-ul">
+							<li class="adress-header">Контакты</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-mail" href="mailto:yaroslavkryvda@gmail.com">yaroslavkryvda@gmail.com</a>
+							</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-phone" href="tel:+380979999999">+380979999999</a>
+							</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-skype" href="skype:yarik890105">yarik890105</a>
+							</li>	
+						</ul>
+					</adress>
+					<ul class="footer-icons">
+						<li><a href="https://www.facebook.com" class="icon-wrap icon-fb" target="_blank"><span class="hide-text">icon-fb</span></a></li>
+						<li><a href="https://vk.com" target="_blank" class="icon-wrap icon-vk"><span class="hide-text">icon-vk</span></a></li>
+						<li><a href="https://www.twitter.com" target="_blank" class="icon-wrap icon-tw"><span class="hide-text">icon-tw</span></a></li>
+						<li><a href="https://github.com" target="_blank" class="icon-wrap icon-git"></a><span class="hide-text">icon-git</span></li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="login-popup">
+				<div class="login-form">
+					<p class="login-form-close-box">
+						<span class="login-form-header">Авторизируйтесь</span>
+						<span class="login-form-window-close-x">X</span>
+					</p>
+					<form>
+						<input class="login-text-input login-text-input-email" placeholder="Введите e-mail" type="text" required="">
+						<input class="login-text-input login-text-input-pass" placeholder="Введите пароль" type="text" required="">
+						<p class="login-checkbox-input-box">
+							<input class="login-checkbox-input" type="checkbox">
+							<span class="login-checkbox-input-text">Запомнить меня?</span>
+						</p>
+						<input class="login-button-input" type="button" value="Войти">
+					</form>			
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer-content">
+				<div class="lock-box">
+				</div>
+				<span class="lock-text">Вход</span>
+				<span class="footer-text">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
+			</div>
+		</footer>	
+		<!-- my JS -->
+		<script src="bower/jquery/dist/jquery.js"></script>
+		<!-- <script src="http://code.jquery.com/jquery-1.8.3.js"></script> -->
+		<script src="js/main.js"></script>
+	</body>
+	</html>

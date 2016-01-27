@@ -28,19 +28,24 @@
 	  <script src="bower/html5shiv/dist/html5shiv.js"></script>  
 	</head>
 	<body>
+			<!-- header-->
 		<header class="header">
 			<div class="container">
+				<!-- logo-->
 				<div class="logo-wrap">
 					<a href="index.html">
 						<img src="img/logo.png" alt="LostSchool logo">
+						<span class="hide-text">LostSchool logo</span>
 					</a>
 				</div>
+				<!-- header-icons-->
 				<ul class="header-icons">
-					<li><a href="https://www.facebook.com" target="_blank"><span class="icon-wrap icon-fb"></span></a></li>
-					<li><a href="https://vk.com" target="_blank"><span class="icon-wrap icon-vk"></span></a></li>
-					<li><a href="https://www.twitter.com" target="_blank"><span class="icon-wrap icon-tw"></span></a></li>
-					<li><a href="https://github.com" target="_blank"></a><span class="icon-wrap icon-git"></span></li>
+						<li><a href="https://www.facebook.com" class="icon-wrap icon-fb" target="_blank"><span class="hide-text">icon-fb</span></a></li>
+						<li><a href="https://vk.com" target="_blank" class="icon-wrap icon-vk"><span class="hide-text">icon-vk</span></a></li>
+						<li><a href="https://www.twitter.com" target="_blank" class="icon-wrap icon-tw"><span class="hide-text">icon-tw</span></a></li>
+						<li><a href="https://github.com" target="_blank" class="icon-wrap icon-git"></a><span class="hide-text">icon-git</span></li>
 				</ul>
+				<!-- navigation in header (adaptive)-->
 				<div class="mnu-button-wrap">
 					<img class="mnu-button" src="img/mnu-button.png" alt="Кнопка меню">
 					<div class="arrow-up hide"></div>
@@ -60,233 +65,208 @@
 				</div>
 			</div>
 		</header>
-		<div class="login-popup">
-			<div class="login-form">
-				<p class="login-form-close-box">
-					<span class="login-form-header">Авторизируйтесь</span>
-					<span class="login-form-window-close-x">X</span>
-				</p>
-				<form>
-					<input class="login-text-input login-text-input-email" placeholder="Введите e-mail" type="text" required="">
-					<input class="login-text-input login-text-input-pass" placeholder="Введите пароль" type="text" required="">
-					<p class="login-checkbox-input-box">
-						<input class="login-checkbox-input" type="checkbox">
-						<span class="login-checkbox-input-text">Запомнить меня?</span>
-					</p>
-					<input class="login-button-input" type="button" value="Войти">
-				</form>			
-			</div>
-		</div>
+		<!-- main content -->
 		<main class="content">
 			<div class="container">
-				<div class="row">
-					<div class="col-4">
-						<div class="nav-wrap">
-							<div class="nav-mnu">
-								<ul class="nav-mnu-ul">
-									<li><a href="index.html" class="active">Обо мне</a></li>
-									<li><a href="portfolio.html">Мои работы</a></li>
-									<li><a href="contacts.html">Обратная связь</a></li>
+			<!-- navigation in content-->
+				<div class="nav-wrap">
+					<nav class="nav-mnu">
+						<ul class="nav-mnu-ul">
+							<li><a href="index.html" class="active">Обо мне</a></li>
+							<li><a href="portfolio.html">Мои работы</a></li>
+							<li><a href="contacts.html">Обратная связь</a></li>
+						</ul>
+					</nav>
+					<!-- adress in content-->
+					<adress class="adress">
+						<ul class="adress-ul">
+							<li class="adress-header">Контакты</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-mail" href="mailto:yaroslavkryvda@gmail.com">yaroslavkryvda@gmail.com</a>
+							</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-phone" href="tel:+380979999999">+380979999999</a>
+							</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-skype" href="skype:yarik890105">yarik890105</a>
+							</li>	
+						</ul>
+					</adress> 
+				</div>
+				<!-- page content-->
+				<div class="page-wrap">
+					<section class="page-content">
+						<h2 class="p-cont-header">Основная информация</h2>
+						<div class="p-cont-box">
+							<div class="p-cont-info clear">
+								<div class="photo-frame"><img src="img/my-photo.jpg" alt="My photo"></div>
+								<ul class="about-me-box">
+									<li class="about-item clear">
+										<span class="about-what semibold">Меня зовут:</span>
+										<span class="about-info">Ярослав Кривда </span>
+									</li>
+									<li class="about-item clear">
+										<span class="about-what semibold">Мой возраст:</span>
+										<span class="about-info">26 лет</span>
+									</li>
+									<li class="about-item clear">
+										<span class="about-what semibold">Мой город:</span>
+										<span class="about-info">Винница, Украина</span>
+									</li>
+									<li class="about-item clear">
+										<span class="about-what semibold">Моя специализация:</span>
+										<span class="about-info"><span class="uppercase">frontend </span> разработка</span>
+									</li>
+									<div class="tags-box">
+										<div class="tags-header semibold">Ключевые навыки:</div>
+										<ul class="tags-cell">
+											<li class="tag">HTML</li>
+											<li class="tag">CSS</li>
+											<li class="tag">JavaScript</li>
+											<li class="tag">Git</li>
+											<li class="tag">Gulp</li>
+											<li class="tag">PHP</li>
+											<li class="tag">Angular</li>
+											<li class="tag">xml</li>
+										</ul>
+									</div>
 								</ul>
 							</div>
-							<adress class="adress">
-								<ul class="adress-ul">
-									<li class="adress-header">Контакты</li>
-									<li class="adress-item clear">
-										<a class="adress-item-link" href="mailto:yaroslavkryvda@gmail.com">
-											<div class="adress-item-link-wrap">
-												<div class="adress-item-link-wrap-mail">
-													<span class="adress-item-text">y.kryvda@gmail.com</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li class="adress-item clear">
-										<a class="adress-item-link" href="tel:+79812342323">
-											<div class="adress-item-link-wrap">
-												<div class="adress-item-link-wrap-phone">
-													<span class="adress-item-text">+79812342323</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li class="adress-item clear">
-										<a class="adress-item-link" href="skype:yarik890105">
-											<div class="adress-item-link-wrap">
-												<div class="adress-item-link-wrap-skype">
-													<span class="adress-item-text">yarik890105</span>
-												</div>
-											</div>
-										</a>
-									</ul>
-								</adress>
-							</div>
 						</div>
-						<div class="col-8">
-							<div class="page-wrap">
-								<section class="page-content">
-									<h2 class="p-cont-header">Основная информация</h2>
-									<div class="p-cont-box">
-										<div class="p-cont-info clear">
-											<div class="photo-box">
-												<div class="photo-frame"><img src="img/my-photo.jpg" alt="My photo"></div>
-											</div>
-											<div class="about-me-box">
-												<p class="about-me-info"><span class="semibold">Меня зовут:</span> Ярослав Кривда</p>
-												<p class="about-me-info"><span class="semibold">Мой возраст:</span> 26 лет</p>
-												<p class="about-me-info"><span class="semibold">Мой город:</span> Винница, Украина</p>
-												<p class="about-me-info"><span class="semibold">Моя специализация:</span> <span class="uppercase">frontend</span> разработка</p>
-												<div class="tags-box">
-													<div class="tags-header semibold">Ключевые навыки:</div>
-													<ul class="tags-cell">
-														<li class="tag">HTML</li>
-														<li class="tag">CSS</li>
-														<li class="tag">JavaScript</li>
-														<li class="tag">Git</li>
-														<li class="tag">Gulp</li>
-														<li class="tag">PHP</li>
-														<li class="tag">Angular</li>
-														<li class="tag">xml</li>
-													</ul>
-												</div>
-											</div>
+					</section>
+					<section class="page-content">
+						<h2 class="p-cont-header">Опыт работы</h2>
+						<div class="p-cont-box">
+							<div class="p-cont-info clear">
+								<div class="p-cont-info-item clear">
+									<div class="item-img-frame">
+										<div class="item-img-box">
+											<div class="item-img-box-bag"></div>
 										</div>
 									</div>
-
-								</section>
-								<section class="page-content">
-									<h2 class="p-cont-header">Опыт работы</h2>
-									<div class="p-cont-box">
-										<div class="p-cont-info clear">
-											<div class="p-cont-info-item clear">
-												<div class="item-img-frame">
-													<div class="item-img-box">
-														<div class="item-img-box-bag"></div>
-													</div>
-												</div>
-												<div class="p-cont-info-item-box">
-													<p class="semibold">"ИП Боровицкий" - Продавец дисков</p>
-													<p>Сентябрь 2005 - Август 2008</p>
-												</div>
-											</div>
-											<div class="p-cont-info-item clear">
-												<div class="item-img-frame">
-													<div class="item-img-box">
-														<div class="item-img-box-bag"></div>
-													</div>
-												</div>
-												<div class="p-cont-info-item-box">
-													<p class="semibold">"ООО Системы безопастности" - Системный администратор</p>
-													<p>Сентябрь 2005 - Август 2008</p>
-												</div>
-											</div>
-											<div class="p-cont-info-item clear">
-												<div class="item-img-frame">
-													<div class="item-img-box">
-														<div class="item-img-box-bag"></div>
-													</div>
-												</div>
-												<div class="p-cont-info-item-box">
-													<p class="semibold">"ИП Боровицкий" - Продавец дисков</p>
-													<p>Сентябрь 2005 - Август 2008</p>
-												</div>
-											</div>
+									<div class="p-cont-info-item-box">
+										<p class="semibold">"ИП Боровицкий" - Продавец дисков</p>
+										<p>Сентябрь 2005 - Август 2008</p>
+									</div>
+								</div>
+								<div class="p-cont-info-item clear">
+									<div class="item-img-frame">
+										<div class="item-img-box">
+											<div class="item-img-box-bag"></div>
 										</div>
 									</div>
-								</section>
-								<section class="page-content">
-									<h2 class="p-cont-header">Образование</h2>
-									<div class="p-cont-box">
-										<div class="p-cont-info clear">
-											<div class="p-cont-info-item clear">
-												<div class="item-img-frame">
-													<div class="item-img-box">
-														<div class="item-img-box-note"></div>
-													</div>
-												</div>
-												<div class="p-cont-info-item-box">
-													<p class="semibold">"ИП Боровицкий" - Продавец дисков</p>
-													<p>Сентябрь 2005 - Август 2008</p>
-												</div>
-											</div>
-											<div class="p-cont-info-item clear">
-												<div class="item-img-frame">
-													<div class="item-img-box">
-														<div class="item-img-box-hat"></div>
-													</div>
-												</div>
-												<div class="p-cont-info-item-box">
-													<p class="semibold">"ООО Системы безопастности" - Системный администратор</p>
-													<p>Сентябрь 2005 - Август 2008</p>
-												</div>
-											</div>
-											<div class="p-cont-info-item clear">
-												<div class="item-img-frame">
-													<div class="item-img-box">
-														<div class="item-img-box-file"></div>
-													</div>
-												</div>
-												<div class="p-cont-info-item-box">
-													<p class="semibold">"ИП Боровицкий" - Продавец дисков</p>
-													<p>Сентябрь 2005 - Август 2008</p>
-												</div>
-											</div>
+									<div class="p-cont-info-item-box">
+										<p class="semibold">"ООО Системы безопастности" - Системный администратор</p>
+										<p>Сентябрь 2005 - Август 2008</p>
+									</div>
+								</div>
+								<div class="p-cont-info-item clear">
+									<div class="item-img-frame">
+										<div class="item-img-box">
+											<div class="item-img-box-bag"></div>
 										</div>
 									</div>
-								</section>
-								<adress class="bottom-adress">
-									<ul class="adress-ul">
-										<li class="adress-item clear">
-											<a class="adress-item-link" href="mailto:yaroslavkryvda@gmail.com">
-												<div class="adress-item-link-wrap">
-													<div class="adress-item-link-wrap-mail">
-														<span class="adress-item-text">y.kryvda@gmail.com</span>
-													</div>
-												</div>
-											</a>
-										</li>
-										<li class="adress-item clear">
-											<a class="adress-item-link" href="tel:+79812342323">
-												<div class="adress-item-link-wrap">
-													<div class="adress-item-link-wrap-phone">
-														<span class="adress-item-text">+79812342323</span>
-													</div>
-												</div>
-											</a>
-										</li>
-										<li class="adress-item clear">
-											<a class="adress-item-link" href="skype:yarik890105">
-												<div class="adress-item-link-wrap">
-													<div class="adress-item-link-wrap-skype">
-														<span class="adress-item-text">yarik890105</span>
-													</div>
-												</div>
-											</a>
-										</ul>
-									</adress>
-									<ul class="footer-icons">
-										<li><a href="https://www.facebook.com" target="_blank"><span class="icon-wrap icon-fb"></span></a></li>
-										<li><a href="https://vk.com" target="_blank"><span class="icon-wrap icon-vk"></span></a></li>
-										<li><a href="https://www.twitter.com" target="_blank"><span class="icon-wrap icon-tw"></span></a></li>
-										<li><a href="https://github.com" target="_blank"></a><span class="icon-wrap icon-git"></span></li>
-									</ul>
+									<div class="p-cont-info-item-box">
+										<p class="semibold">"ИП Боровицкий" - Продавец дисков</p>
+										<p>Сентябрь 2005 - Август 2008</p>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</main>
-				<footer class="footer">
-					<div class="footer-content">
-						<div class="lock-box">
+					</section>
+					<section class="page-content">
+						<h2 class="p-cont-header">Образование</h2>
+						<div class="p-cont-box">
+							<div class="p-cont-info clear">
+								<div class="p-cont-info-item clear">
+									<div class="item-img-frame">
+										<div class="item-img-box">
+											<div class="item-img-box-note"></div>
+										</div>
+									</div>
+									<div class="p-cont-info-item-box">
+										<p class="semibold">"ИП Боровицкий" - Продавец дисков</p>
+										<p>Сентябрь 2005 - Август 2008</p>
+									</div>
+								</div>
+								<div class="p-cont-info-item clear">
+									<div class="item-img-frame">
+										<div class="item-img-box">
+											<div class="item-img-box-hat"></div>
+										</div>
+									</div>
+									<div class="p-cont-info-item-box">
+										<p class="semibold">"ООО Системы безопастности" - Системный администратор</p>
+										<p>Сентябрь 2005 - Август 2008</p>
+									</div>
+								</div>
+								<div class="p-cont-info-item clear">
+									<div class="item-img-frame">
+										<div class="item-img-box">
+											<div class="item-img-box-file"></div>
+										</div>
+									</div>
+									<div class="p-cont-info-item-box">
+										<p class="semibold">"ИП Боровицкий" - Продавец дисков</p>
+										<p>Сентябрь 2005 - Август 2008</p>
+									</div>
+								</div>
+							</div>
 						</div>
-						<span class="lock-text">Вход</span>
-						<span class="footer-text">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
-					</div>
-				</footer>	
-
-				<!-- my JS -->
-				<script src="bower/jquery/dist/jquery.js"></script>
-				<!-- <script src="http://code.jquery.com/jquery-1.8.3.js"></script> -->
-				<script src="js/main.js"></script>
-			</body>
-			</html>
+					</section>
+					<adress class="bottom-adress">
+						<ul class="adress-ul">
+							<li class="adress-header">Контакты</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-mail" href="mailto:yaroslavkryvda@gmail.com">yaroslavkryvda@gmail.com</a>
+							</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-phone" href="tel:+380979999999">+380979999999</a>
+							</li>
+							<li class="adress-item clear">
+								<a class="adress-item-link link-skype" href="skype:yarik890105">yarik890105</a>
+							</li>	
+						</ul>
+					</adress>
+					<ul class="footer-icons">
+						<li><a href="https://www.facebook.com" class="icon-wrap icon-fb" target="_blank"><span class="hide-text">icon-fb</span></a></li>
+						<li><a href="https://vk.com" target="_blank" class="icon-wrap icon-vk"><span class="hide-text">icon-vk</span></a></li>
+						<li><a href="https://www.twitter.com" target="_blank" class="icon-wrap icon-tw"><span class="hide-text">icon-tw</span></a></li>
+						<li><a href="https://github.com" target="_blank" class="icon-wrap icon-git"></a><span class="hide-text">icon-git</span></li>
+					</ul>
+				</div>
+			</div>
+			<!-- hidden authorization page -->
+			<div class="login-popup">
+				<div class="login-form">
+					<p class="login-form-close-box">
+						<span class="login-form-header">Авторизируйтесь</span>
+						<span class="login-form-window-close-x">X</span>
+					</p>
+					<form>
+						<input class="login-text-input login-text-input-email" placeholder="Введите e-mail" type="text" required="">
+						<input class="login-text-input login-text-input-pass" placeholder="Введите пароль" type="text" required="">
+						<p class="login-checkbox-input-box">
+							<input class="login-checkbox-input" type="checkbox">
+							<span class="login-checkbox-input-text">Запомнить меня?</span>
+						</p>
+						<input class="login-button-input" type="button" value="Войти">
+					</form>			
+				</div>
+			</div>
+		</main>
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footer-content">
+				<div class="lock-box">
+				</div>
+				<span class="lock-text">Вход</span>
+				<span class="footer-text">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
+			</div>
+		</footer>	
+		<!-- my JS -->
+		<script src="bower/jquery/dist/jquery.js"></script>
+		<!-- <script src="http://code.jquery.com/jquery-1.8.3.js"></script> -->
+		<script src="js/main.js"></script>
+	</body>
+	</html>
