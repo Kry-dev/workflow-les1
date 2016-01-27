@@ -27,24 +27,24 @@
 	}
 	.tags-header{		width: 155px;	}
 	.tags-cell{	min-width: 240px;	}
-	.bottom-adress{		
+	.bottom-address{		
 		display: block;
 		padding-bottom: 35px;
 	}
-  .adress-ul {
+  .address-ul {
     border-radius: 0;
 		min-width: 100%;
    }
-  .adress-item {
+  .address-item {
     float: left;
     width: 33.33333%;
     border-radius: 0;
 	}
-  .adress-item a {
+  .address-item a {
     color: inherit;
     text-decoration: none;
    }
-	.adress-item-link:first-child {
+	.address-item-link:first-child {
     background-image: #f9f9f8;
     background-image: -moz-linear-gradient(top, #ffffff 0%, #f6f5f5 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f6f5f5));
@@ -53,7 +53,7 @@
     background-image: -ms-linear-gradient(top, #ffffff 0%, #f6f5f5 100%);
     background-image: linear-gradient(to bottom, #ffffff 0%, #f6f5f5 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f5f5',GradientType=0 ); }
-	.adress-item:last-child{ border-radius: 0;}
+	.address-item:last-child{ border-radius: 0;}
   .menu_button_box {    display: block; }
   .lock_box {  margin-left: 140px;  } 
 
@@ -62,7 +62,7 @@
 	.logo-wrap{	margin-left: 30px;}
 	.container{		width: 96%;	}
 	.mnu-button-wrap{		display: block;	}
-	.bottom-adress{		display: block;	}
+	.bottom-address{		display: block;	}
 	.page-wrap{
 		max-width: 100%;
 	}
@@ -93,7 +93,7 @@
 		padding-left: 0;
 		max-width: 100%;
 	}
-	.adress-item{
+	.address-item{
 		float: none;
 		width: 100%;
 	}
@@ -148,11 +148,11 @@
 		float: none;
 		text-align: center;
 	}
-	.adress-item{
+	.address-item{
 		float: none;
 		width: 100%;
 	}
-	.bottom-adress{	
+	.bottom-address{	
 		display: block;
 		padding: 0;
 	}
@@ -219,14 +219,14 @@
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 993px) {
-	.bottom-adress{	display: none;	}
+	.bottom-address{	display: none;	}
 	.container{	width: 84%;	}
 	.page-wrap{	margin: 24px 0;	}
 	.mnu-button-wrap{ display: none;}
 }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1201px) {
-	.bottom-adress{	display: none;	}
+	.bottom-address{	display: none;	}
 	.container{	width: 80%;	}
 	.page-wrap{	float: left;	}
 	.mnu-button-wrap{ display: none;	}
