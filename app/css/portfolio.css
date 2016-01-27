@@ -90,6 +90,8 @@
   margin-bottom: 22px;
   vertical-align: top;
   cursor: pointer;
+  color: #727070;
+  text-decoration: none;
   background: #faf9f9;
   background: -moz-linear-gradient(top, #faf9f9 0%, #e9e7e6 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #faf9f9), color-stop(100%, #e9e7e6));
