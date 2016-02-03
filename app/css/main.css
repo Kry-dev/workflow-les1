@@ -27,6 +27,7 @@ body{
 }
 /* МОЯ СЕТКА ПО УРОКУ: https://www.youtube.com/watch?v=txOKjSEwHVM */
 .hide{	display: none;}
+.unvis{	visibility: hidden;}
 .hide-text{	font-size: 0;}
 .container{
 	width: 98%;
@@ -143,7 +144,6 @@ body{
 }
 /* LOGIN FORM*/
 .login-popup{
-	display: none;
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -191,7 +191,7 @@ body{
 	border: 1px solid #d6d5d3;
 	border-radius: 5px;
 	font-size: 12px;
-	width: 182px;
+	width: 250px;
 	display: block;
 	margin: 0 auto 24px;
 	line-height: 36px;

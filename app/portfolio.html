@@ -143,7 +143,7 @@
 									<div class="my-work-header">yasnow.biz</div>
 									<div class="my-work-descr">Landing page по продажи франшизы снежного бизнеса.</div>
 								</div>
-								<a class="add-project-box" href="#">
+								<a class="add-project-box" href="#add-project">
 									<div class="add-proj-img-frame">
 										<div class="add-proj-img-box">
 											<img src="img/polaroid.png" height="21" width="21" alt="polaroid icon">
@@ -175,11 +175,11 @@
 						<li><a href="https://www.twitter.com" target="_blank" class="icon-wrap icon-tw"><span class="hide-text">icon-tw</span></a></li>
 						<li><a href="https://github.com" target="_blank" class="icon-wrap icon-git"></a><span class="hide-text">icon-git</span></li>
 					</ul>
-				</div>
-				
+				</div>			
 			</div>
-			<div class="login-popup">
-				<div class="login-form">
+			<!-- LOGIN POPUP -->
+			<div class="login-popup hide">
+				<div class="login-form hide">
 					<p class="login-form-close-box">
 						<span class="login-form-header">Авторизируйтесь</span>
 						<span class="login-form-window-close-x">X</span>
@@ -194,7 +194,58 @@
 						<input class="login-button-input" type="button" value="Войти">
 					</form>			
 				</div>
-			</div>
+			</div>			<!-- END LOGIN POPUP -->
+			<!-- ADD PROJECT POPUP -->
+			<div id= "add-project" class="project-popup hide" >
+				<div class="success-box hide">
+					<p class="success-box-close">
+						<span class="success-close-x">X</span>
+					</p>
+					<div class="success-message">
+						<p class="add-proj-success-header">Ура!</p>
+						<p class="add-proj-success-text">Проект успешно добавлен.</p>
+					</div>
+				</div>
+				<div class="project-window hide">
+					<p class="window-close-box">
+						<span class="proj-miniheader">Добавление проекта</span>
+						<span class="window-close">X</span>
+					</p>
+					<form id="portfolio-form" method="post" action="" novalidate="novalidate">
+						<div class="add-proj-error hide">
+							<p class="add-proj-error-header">Ошибка!</p>
+							<p class="add-proj-error-text">Невозможно добавить проект.</p>
+						</div>
+						<p class="proj-item-header">Название проекта</p>
+						<div class="proj-field-box">
+							<!-- <div class="proj-tooltip"><span>Введите название</span></div> -->
+							<input id="portfolio-form-name" name="portfolio-form-name" class="add-proj-text-input" placeholder="Введите название" type="text" required="" aria-required="true">
+						</div>
+						<p class="proj-item-header">Картинка проекта</p>
+						<div class="add-field-box">
+							<!-- <div class="proj-tooltip"><span>Загрузите изображение</span></div> -->
+							<input id="filename" type="text" class="add-proj-text-input" name="filename" placeholder="Загрузите изображение" disabled="">
+							<label class="add-proj-file-button">
+								<input id="fileupload" class="fileupload" type="file" name="files[]">
+								<input id="fileurl" type="hidden" name="fileurl">
+							</label>
+							<!-- <input class="add-proj-text-input" placeholder="Загрузите изображение" type="text">
+								<input class="add-proj-file-button" type="button"> 		-->
+						</div>
+						<p class="proj-item-header">URL проекта</p>
+						<div class="add-field-box">
+							<!-- <div class="proj-tooltip"><span>Введите ссылку</span></div> -->
+							<input id="portfolio-form-url" name="portfolio-form-url" class="add-proj-text-input" placeholder="Добавьте ссылку" type="text" required="" aria-required="true">
+						</div>
+						<p class="proj-item-header">Описание</p>
+						<div class="addproject-field-box">
+							<!-- <div class="proj-tooltip"><span>Введите описание</span></div> -->
+							<textarea id="portfolio-form-descr" name="portfolio-form-descr" class="add-proj-textarea" rows="4" placeholder="Пара слов о вашем проекте" required="" aria-required="true"></textarea>
+						</div>
+						<input class="add-proj-button-input" type="submit" value="Добавить">
+					</form>			
+				</div>
+			</div><!-- END ADD PROJECT POPUP -->
 		</main>
 		<footer class="footer">
 			<div class="footer-content">
@@ -204,9 +255,9 @@
 				<span class="footer-text">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
 			</div>
 		</footer>	
-		<!-- my JS -->
-		<script src="bower/jquery/dist/jquery.js"></script>
-		<!-- <script src="http://code.jquery.com/jquery-1.8.3.js"></script> -->
-		<script src="js/main.js"></script>
-	</body>
-	</html>
+	<!-- my JS -->
+	<script src="bower/jquery/dist/jquery.js"></script>
+	<!-- <script src="http://code.jquery.com/jquery-1.8.3.js"></script> -->
+	<script src="js/main.js"></script>
+</body>
+</html>
