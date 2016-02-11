@@ -19,7 +19,8 @@
 	.header-icons{		margin-right: 90px;	}
 	.nav-wrap{		display: none;	}
 	.page-wrap{	
-		max-width: 100%;	
+		max-width: 100%;
+		width: 100%;	
 	}
 	.p-cont-box{
 		padding: 10px 20px;
@@ -92,6 +93,9 @@
 		text-align: center;
 		padding-left: 0;
 		max-width: 100%;
+	}
+	.cont-button-input{
+		margin: 28px auto;
 	}
 	.address-item{
 		float: none;
@@ -188,8 +192,9 @@
 		margin: 10px auto;
 		width: 100%;
 	}
-	.name-and-mail-wrap:first-child .name-wrap,
-	.name-and-mail-wrap:first-child .mail-wrap{
+
+	.field-right,
+	.field-left{
 		float: none;
 		width: 100%;
 		display: block;

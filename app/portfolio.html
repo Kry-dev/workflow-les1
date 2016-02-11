@@ -15,8 +15,10 @@
 	<link rel="shortcut icon" href="favicon.png">
 	<!-- CSS -->
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/portfolio.css">
+	<link rel="stylesheet" href="css/forms.css">
 	<link rel="stylesheet" type="text/css" href="css/media.css">
 	<!-- fonts -->
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
@@ -27,6 +29,7 @@
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	  <![endif]-->
 	  <!-- JS -->
+	  <script src="js/vendor/modernizr.js"></script>
 	  <script src="bower/html5shiv/dist/html5shiv.js"></script>  
 	</head>
 	<body>
@@ -143,7 +146,7 @@
 									<div class="my-work-header">yasnow.biz</div>
 									<div class="my-work-descr">Landing page по продажи франшизы снежного бизнеса.</div>
 								</div>
-								<a class="add-project-box" href="#add-project">
+								<a id="add-new-work" href="#" class="add-project-box">
 									<div class="add-proj-img-frame">
 										<div class="add-proj-img-box">
 											<img src="img/polaroid.png" height="21" width="21" alt="polaroid icon">
@@ -196,54 +199,39 @@
 				</div>
 			</div>			<!-- END LOGIN POPUP -->
 			<!-- ADD PROJECT POPUP -->
-			<div id= "add-project" class="project-popup hide" >
-				<div class="success-box hide">
-					<p class="success-box-close">
-						<span class="success-close-x">X</span>
-					</p>
-					<div class="success-message">
-						<p class="add-proj-success-header">Ура!</p>
-						<p class="add-proj-success-text">Проект успешно добавлен.</p>
-					</div>
-				</div>
-				<div class="project-window hide">
-					<p class="window-close-box">
-						<span class="proj-miniheader">Добавление проекта</span>
-						<span class="window-close">X</span>
-					</p>
-					<form id="portfolio-form" method="post" action="" novalidate="novalidate">
-						<div class="add-proj-error hide">
-							<p class="add-proj-error-header">Ошибка!</p>
-							<p class="add-proj-error-text">Невозможно добавить проект.</p>
-						</div>
-						<p class="proj-item-header">Название проекта</p>
-						<div class="proj-field-box">
-							<!-- <div class="proj-tooltip"><span>Введите название</span></div> -->
-							<input id="portfolio-form-name" name="portfolio-form-name" class="add-proj-text-input" placeholder="Введите название" type="text" required="" aria-required="true">
-						</div>
-						<p class="proj-item-header">Картинка проекта</p>
-						<div class="add-field-box">
-							<!-- <div class="proj-tooltip"><span>Загрузите изображение</span></div> -->
-							<input id="filename" type="text" class="add-proj-text-input" name="filename" placeholder="Загрузите изображение" disabled="">
-							<label class="add-proj-file-button">
-								<input id="fileupload" class="fileupload" type="file" name="files[]">
-								<input id="fileurl" type="hidden" name="fileurl">
-							</label>
-							<!-- <input class="add-proj-text-input" placeholder="Загрузите изображение" type="text">
-								<input class="add-proj-file-button" type="button"> 		-->
-						</div>
-						<p class="proj-item-header">URL проекта</p>
-						<div class="add-field-box">
-							<!-- <div class="proj-tooltip"><span>Введите ссылку</span></div> -->
-							<input id="portfolio-form-url" name="portfolio-form-url" class="add-proj-text-input" placeholder="Добавьте ссылку" type="text" required="" aria-required="true">
-						</div>
-						<p class="proj-item-header">Описание</p>
-						<div class="addproject-field-box">
-							<!-- <div class="proj-tooltip"><span>Введите описание</span></div> -->
-							<textarea id="portfolio-form-descr" name="portfolio-form-descr" class="add-proj-textarea" rows="4" placeholder="Пара слов о вашем проекте" required="" aria-required="true"></textarea>
-						</div>
-						<input class="add-proj-button-input" type="submit" value="Добавить">
-					</form>			
+			<div id ="popup-new-project" class="">
+				<div class="popup-wrapper">
+					<div class="popup-body">
+						
+							<h4 class="popup-title">Добавление проекта</h4>
+							<button type="button" class="b-close"></button>
+						
+						<form id="add-new-project" class="form">
+							<div class="server-mes error-mes"></div>
+							<div class="server-mes success-mes"></div>
+							<fieldset class="fieldset">
+								<label for="project-name" class="label">Название проекта</label>
+								<input id="project-name" type="text" placeholder="Введите название" class="input" qtip-content="введите название"/>
+							</fieldset>
+							<fieldset class="fieldset">
+								<label class="label" for="picture">Картинка проекта</label>
+								<input type="file" id="file"/>
+								<input type="text" id="projectImg" class="input" placeholder="Загрузите изображение" qtip-content="А где картинка?" />
+								<label for="file" class="download-pict"></label>
+							</fieldset>
+							<fieldset class="fieldset">
+								<label class="label" for="url">URL проекта</label>
+								<input type="text" placeholder="Добавьте ссылку" class="input" id="url" qtip-content="ссылка на проект">
+							</fieldset>
+							<fieldset class="fieldset">
+								<label class="label" for="description">Описание</label>
+								<textarea type="text" placeholder="Пара слов о Вашем проекте" class="input last-input" id="description" qtip-content="описание проекта"></textarea>
+							</fieldset>
+							<fieldset class="fieldset">
+								<button class="add-button" type="submit">Добавить</button>
+							</fieldset>
+						</form>
+					</div>		
 				</div>
 			</div><!-- END ADD PROJECT POPUP -->
 		</main>
@@ -255,9 +243,14 @@
 				<span class="footer-text">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
 			</div>
 		</footer>	
-	<!-- my JS -->
-	<script src="bower/jquery/dist/jquery.js"></script>
-	<!-- <script src="http://code.jquery.com/jquery-1.8.3.js"></script> -->
-	<script src="js/main.js"></script>
-</body>
-</html>
+		<!-- my JS -->
+		<script src="bower/jquery/dist/jquery.min.js"></script>
+		<script src="bower/bPopup/jquery.bpopup.min.js"></script>
+		<script src="js/add-project.js"></script>
+		<script src="js/validate.js"></script>
+
+
+		<script src="bower/qtip2/jquery.qtip.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+	</html>
