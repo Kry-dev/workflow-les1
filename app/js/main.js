@@ -1,60 +1,23 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $(document).ready(function() {
+$(document).ready(function() {
 	
-// 	// Проверка наличия JS, jQuery.
-// 	console.log("js works");
-// 	if($) {
-// 		console.log("jQuery works");
-// 	}
+	// Проверка наличия JS, jQuery.
+	console.log("js works");
+	if($) {
+		console.log("jQuery works");
+	}
+		// toggle функция открытия/закрытия меню.
+	var openCloseMenu = function() {
+		$(".mnu-button-wrap").click(function() {
+			$(".arrow-up").toggleClass("hide");
+			$(".nav-mnu-head").toggleClass("hide");
+		});
+	};
+	openCloseMenu();
+});	
+
+
+//===== СТАРАЯ ВЕРСИЯ JS ======
+
 // 	// Функция открывает/закрывает окно Авторизации.
 // 	var openCloseLoginPopup = function() {
 // 		$(".lock-box").click(function() { // Нажатие на замочек.
@@ -100,41 +63,8 @@
 // 			$(".footer").removeClass("unvis");
 // 		});
 // 	};
-// 	// Функция открывает/закрывает окошко добавления работы портфолио.
-// 	var addProjectPopup = function() {
-// 		$(".add-project-box").click(function() {
-// 			$(".project_popup").removeClass("hide");
-// 			$(".project_window").removeClass("hide");
-// 		});
-// 		$(".project_window_close_x").click(function() {
-// 			$(".project_popup").addClass("hide");
-// 			$(".project_window").addClass("hide");
-// 		});
-// 	};
-// 	// Функция, показывает окно с сообщением от успешном добавлении проекта после сабмита формы.
-// 	var addProject = function() {
-// 		$(".add_proj_button_input").on("submit", function() {
-// 			$(".project_popup").addClass("hide");
-// 			$(".sucsess_window").removeClass("hide");
-// 		});
-// 	};
-// // Функция закрытия окна с sucsess-сообщением при нажатии на X. 
-// 	var closeSucsessWindow = function() {
-// 		$(".sucsess-window-close-x").click(function() {
-// 			$(".project-popup").addClass("hide");
-// 			$(".project-window").addClass("hide");
-// 			$(".sucsess-window").addClass("hide");
-// 		});
-// 	};
-// 	// toggle функция открытия/закрытия меню.
-// 	var openCloseMenu = function() {
-// 		$(".mnu-button-wrap").click(function() {
-// 			$(".arrow-up").toggleClass("hide");
-// 			$(".nav-mnu-head").toggleClass("hide");
-// 		});
-// 	};
+// 
 // // Иниализация функций.
-// 	openCloseMenu();
 
 // 	closeSucsessWindow();
 
