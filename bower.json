@@ -19,7 +19,7 @@
     "modernizr": "~3.3.1",
     "jquery": "1.5.0"
   },
-  "homepage": "https://github.com/Noobko/workflow-les1",
+  "homepage": "https://github.com/Kry-dev/workflow-les1",
   "description": "Portfolio",
   "main": "index.html",
   "moduleType": [
