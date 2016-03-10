@@ -13,7 +13,13 @@
     "tests"
   ],
   "dependencies": {
-    "jquery-validation": "1.14.0"
+    "html5shiv": "~3.7.3",
+    "bPopup": "bpopup#~0.11.0",
+    "qtip2": "~2.2.1",
+    "normalize-css": "normalize.css#~3.0.3",
+    "jquery": "1.9.1",
+    "blueimp-file-upload": "~9.11.2",
+    "jquery-placeholder": "~2.3.1"
   },
   "devDependencies": {
     "modernizr": "~3.3.1",
@@ -22,9 +28,6 @@
   "homepage": "https://github.com/Kry-dev/workflow-les1",
   "description": "Portfolio",
   "main": "index.html",
-  "moduleType": [
-    "node"
-  ],
-  "license": "MIT",
-  "private": true
+  "moduleType": [],
+  "license": "MIT"
 }

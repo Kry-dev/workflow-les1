@@ -322,7 +322,7 @@ body{
 .content{
 	margin: 0 auto;
 	min-width: 960px;
-	max-width: 1000px;
+	width: 1000px;
 	min-height: 100%;
 	padding-bottom: 60px;
 	-webkit-box-sizing: border-box;
@@ -331,7 +331,9 @@ body{
 }
 /* NAV MENU*/
 .nav-wrap{	
-	min-width: 250px;
+	width: 250px;
+	float: left;
+	margin-right: 25px;
 	display: inline-block;
 }
 .nav-mnu{
@@ -495,6 +497,7 @@ body{
 	float: right;
 	display: inline-block;
 	max-width: 650px;
+	margin: 0;
 }
 .page-content{
 	border-radius: 5px;

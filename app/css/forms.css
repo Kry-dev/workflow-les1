@@ -29,7 +29,11 @@
 	background: linear-gradient(to bottom, #fbfcfd 0%, #f4f3f4 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfcfd', endColorstr='#f4f3f4',GradientType=0 );
 }
-.server-mes{
+button:active,
+button:focus{
+	outline: none;
+}
+.server-message{
 	border-right: 4px;
 	border: 1px solid;
 	font-size: 12px;
@@ -40,19 +44,17 @@
 	border-radius: 7px;
 	display: none;
 }
-.server-mes.error-mes,
-.has-error,
-.server-mes{
+.server-message.error-message,
+.server-message{
 	border-color: #d17f63;
 	color: #d17f63;
 	background-color: #e9c8bc;
 }
-.server-mes.success-mes{
+.server-message.success-message{
 	border-color: #49bb7b;
 	color: #49bb7b;
 	background-color: #bde2cc;
 }
-
 .qtip-content {
 	font-size: 11px;
 	font-weight: 600;
@@ -71,19 +73,21 @@
 .qtip-red{
 	border-color: #DFAB97;
 }
-.has-error{
+.field-error{
 	border-color: #DFAB97;
 }
 
 /* ADD PROJECT POPUP IN PORTFOLIO */
-#popup-new-project {
-	display :none;
+
+.popup {
+	display: none;
  }
 .popup-body {
 	width: 364px;
 	min-height: 465px;
 	top: 50%;
 	left: 50%;
+	z-index: 20;
 	margin-left: -183px;
 	margin-top: -233px;
 	padding: 15px 10px 0;
@@ -100,6 +104,16 @@
 	border: 1px solid #d2d2d2;
 	box-shadow: 0 18px 13px -13px rgba(0, 0, 0, 0.1);
 	box-sizing: border-box; 
+}
+.body-shadow{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 940px;
+	height: 100%;
+	z-index: 19;
+	background-color: rgba(0,0,0,0.6);
 }
 .b-close{
 	cursor: pointer;
@@ -124,48 +138,35 @@
 	top: -30px;
 	color: #f8f7f6; 
 }
-#file{
-	width: 1px;
-	height: 1px;
-	opacity: 0;
-}
 .input-picture{
 	width: 100%;
-	/* resize: none; */
+	resize: none; 
 	padding-top: 9px;
 }
-.download-pict{
-	position: absolute;
-	float: right;
-	top: 29px;
-	right: 0;
-	height: 43px;
-	width: 55px;
-	box-sizing: border-box;
-	border-radius: 0px 5px 5px 0;
-	border: 1px solid #d6d5d3;
-	background-color: ;
-	background-image: url(../img/cloud.png), url(../img/bg_cloud.png);
-	background-repeat: no-repeat, repeat-x;
-	background-position: 15px 12px, 0 0;
-	cursor: pointer;
+.project-upload input[type=file]{
+  position: absolute;
+  left: 0;
+  top: 11px;
+  z-index: -5;
 }
-.download-img-box{
-	margin-left: 0;
-	width: 100%;
-	position: relative;
- } 
-.download-img-btn{
-	display: inline-block;
-	width: 52px;
-	height: 41px;
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-right: 0;
-	position: absolute;
-	left: 268px;
-	bottom: 0px;
+.project-upload-button {
+  width: 20%;
+  height: 41px;
+  float: left;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: solid 1px #c3c2c2;
+  background: url(../img/cloud.png) no-repeat center, linear-gradient(to top, #e9e6e5, #fbf9f9 94%, #fff); 
+	overflow: hidden;
 }
+.project-upload-input {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  float: left;
+  color: #a9a9a9;
+ }
 .last-input {
 	height: 111px;
 	padding-top: 9px;

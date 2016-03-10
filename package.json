@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "<<<<<<< HEAD\r For installing this progect you should have Node.js + Npm and Bower, globaly installed on your computer.",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "jquery-placeholder": "^2.3.1"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-connect-php": "0.0.7"

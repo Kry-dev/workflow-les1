@@ -1,163 +1,241 @@
 $(document).ready(function() {
 	
-	// Проверка наличия JS, jQuery.
-	console.log("js works");
-	if($) {
-		console.log("jQuery works");
-	}
-		// toggle функция открытия/закрытия меню.
-	var openCloseMenu = function() {
-		$(".mnu-button-wrap").click(function() {
-			$(".arrow-up").toggleClass("hide");
-			$(".nav-mnu-head").toggleClass("hide");
-		});
+	var openCloseMenu = function() {  // toggle функция открытия/закрытия меню для адаптивной версии.
+			$(".mnu-button-wrap").click(function() {
+				$(".arrow-up").toggleClass("hide");
+				$(".nav-mnu-head").toggleClass("hide");
+			});
 	};
 	openCloseMenu();
-});	
+/*
+ * * * УПРАВЛЕНИЕ ФОРМАМИ 
+ */
+	(function() {
 
+		var listFiles = [];
+			publicMethod();
+			init();
+			attachEvents();
+		
+		function init() {
+			listFiles = _initFileUpload();
+		};
+		
+		function attachEvents(){
+			// Loads input[file] text to fake field 
+			$('#project-file').change( _loadText );
+			// Inits form processing on submit
+			$('form').on('submit', function (e) {
+				e.preventDefault();
+				_processForm(this);
+				});
+		};
 
-//===== СТАРАЯ ВЕРСИЯ JS ======
+		// Hides success and error messages
+		$('.server-message').on('click', function () {
+				$(this).fadeOut(100);
+		});
 
-// 	// Функция открывает/закрывает окно Авторизации.
-// 	var openCloseLoginPopup = function() {
-// 		$(".lock-box").click(function() { // Нажатие на замочек.
-// 			$(this).toggleClass("lock-box-active");
-// 			if ($(".login-popup").hasClass("hide")) {
-// 				$(".login-popup").removeClass("hide");
-// 				$(".login-form").removeClass("hide");
-// 				$(".header").addClass("unvis");
-// 				$(".container").addClass("unvis");
-// 				$(".footer").addClass("unvis");
-// 			} else {
-// 				$(".login-popup").addClass("hide");
-// 				$(".login-form").addClass("hide");
-// 				$(".header").removeClass("unvis");
-// 				$(".container").removeClass("unvis");
-// 				$(".footer").removeClass("unvis");
-// 			}
-// 		});
+		function $showTooltip (object, content, atPos) {
+			var myPos = 'right';
+			if (atPos == 'right') {
+				myPos = 'left';
+				}
+			object.qtip ({
+						content: content,
+						position: {
+							my: myPos +' center',	// my position...
+							at: atPos +' center' // at the ...
+							
+						},
+						style: {
+							classes: 'qtip-red qtip-shadow qtip-rounded qtip-mine',
+							tip: {
+								height: 13,
+								width: 18
+							}
+						},
+						show: {
+                       		ready: true,
+                       		event: false
+                   		},
+						hide: {
+							distance: 30, // Hide it after we move 15 pixels away from the origin
+							delay: 100,
+							event: 'focus keydown click mouseenter'
+						}
+					})
+		};
 
-// 		$(".lock-text").click(function() { // Нажатие на текст рядом с замочком.
-// 			$(".lock-box").toggleClass("lock-box-active");
-// 			if ($(".login-popup").hasClass("hide")) {
-// 				$(".login-popup").removeClass("hide");
-// 				$(".login-form").removeClass("hide");
-// 				$(".header").addClass("unvis");
-// 				$(".container").addClass("unvis");
-// 				$(".footer").addClass("unvis");
-// 			} else {
-// 				$(".login-popup").addClass("hide");
-// 				$(".login-form").addClass("hide");
-// 				$(".header").removeClass("unvis");
-// 				$(".container").removeClass("unvis");
-// 				$(".footer").removeClass("unvis");
-// 			}
-// 		});
+		function _initFileUpload () {
+			$('#project-file').fileupload({
+				url: 'UploadHandler.php',
+				dataType: 'json',
+				replaceFileInput: false,
+				maxNumberOfFiles: 1,
+				add: function(e, data) {
+					if (!~data.files[0].type.indexOf('image')) {
+						$showTooltip($(this), 'только картинка', 'left');
+					} else 
+					if (data.files[0].size > 5000000) {
+						$showTooltip($(this), 'Файл слишком большой', 'left');
+					} else {
+						data.submit();
+					}
+				},
+				done: function (e, data) {
+						var fileName = data.files[0].name;
+							$('#project-file-name').val(fileName);
+						}
+			})	
+		};
 
-// 		$(".login-form-window-close-x").click(function() { // Нажатие на крестик, закрывающий окошко.
-// 			$(".lock-box").removeClass("lock-box-active");
-// 			$(".login-popup").addClass("hide");
-// 			$(".login-form").addClass("hide");
-// 			$(".header").removeClass("unvis");
-// 			$(".container").removeClass("unvis");
-// 			$(".footer").removeClass("unvis");
-// 		});
-// 	};
-// 
-// // Иниализация функций.
+		function _loadText () {		 
+			var fileName = $(this).val(),
+				namePos,
+				fileNameCut;
 
-// 	closeSucsessWindow();
+			if (fileName.lastIndexOf('\\')) {
+				namePos = fileName.lastIndexOf('\\')+1;
+			} else {
+				namePos = fileName.lastIndexOf('/')+1;
+			}	
 
-// 	addProject();
+			fileNameCut = fileName.slice(namePos);
 
-// 	addProjectPopup();
+			$(this).siblings('.project-upload-field').html(fileNameCut);
+		};
+	 
+		function _processForm (form) {			
+			var inputsGroup = $(form).find('.required');
+			inputsGroup.each(function() {
+				if ( $(this).val() === '' ) {
+					var 
+						thisElem = $(this),
+						atPos = $(this).attr('data-position'),
+						myPos = 'right';
 
-// 	openCloseLoginPopup();
+					if (atPos == 'right') {
+						myPos = 'left';
+					}
+					thisElem.addClass('field-error');
+					thisElem.parent('.project-upload-input').addClass('field-error');
 
-// 	// Валидация формы обратной связи, плагин http://jqueryvalidation.org/.
-// 	$("#contacts_form").validate({
-// 		messages: {
-// 			cont_form_name: "Введите имя",
-// 			cont_form_email: {
-// 				required: "Введите e-mail",
-// 				email: "Не верный e-mail"
-// 			},
-// 			cont_form_message: "Введите сообщение",
-// 			cont_form_capcha: "Введите код"
-// 		}
-// 	});
-// 	// Функция убирает тултипы с сообщениями об ошибках и стили инпутов в статусе "ошибка", "ОК", при нажатии на кнопку "Очистить".
-// 	var clearForm = function() {
-// 		$(".clear_button").on("click", function() {
-// 			$("#contacts_form_name").removeClass("error");
-// 			$("#contacts_form_name").removeClass("valid");
-// 			$("#contacts_form_name-error").remove();
-// 			$("#contacts_form_email").removeClass("error");
-// 			$("#contacts_form_email").removeClass("valid");
-// 			$("#contacts_form_email-error").remove();
-// 			$("#contacts_form_message").removeClass("error");
-// 			$("#contacts_form_message").removeClass("valid");
-// 			$("#contacts_form_message-error").remove();
-// 			$("#contacts_form_capcha").removeClass("error");
-// 			$("#contacts_form_capcha").removeClass("valid");
-// 			$("#contacts_form_capcha-error").remove();
-// 		});
-// 	};
+					// Calling qTip2 
+					thisElem.qtip({ 
+						content: {
+							attr: 'data-tooltip' 
+						},
+						style: {
+							classes: 'qtip-red qtip-shadow qtip-rounded'
+						},
+						position: {
+							my: myPos +' left center',	// Position my...
+							at: atPos +' center',	// at the ...
+							
+						},
+						show: {
+							ready: true,
+							event: false
+						},
+						hide: {
+							delay: 100,
+							event: 'focus keydown click'
+						},
+						events: {
+	                        hide: (function() {
+	                        	thisElem.removeClass('field-error');
+	                        	thisElem.parent('.project-upload-input').removeClass('field-error');
+	                            thisElem.parent('.project-file').removeClass('field-error');
+	                        })
+                    	}
+					})
+				} 
+			});
+			if (!inputsGroup.hasClass('field-error')){
+				console.log('Форма прошла валидацию');
+				_ajaxForm(form);
+			}
+		};			
+
+		function _ajaxForm (form) {
+			var data = $(form).serializeArray();
+		
+			$.ajax({
+				 url: 'controlForm.php', // куда идет запрос
+				 type: 'post', // тип запроса
+				 dataType: 'json',
+				 data: data	 
+			})
+				.fail(function(ans) {
+					$('.error-message').text('ошибка На сервере').show();
+					$('.error-message').fadeIn(350);
+					console.log(ans.object);
+				})
+				.success(function(ans) {
+					$('.success-message').text('Успешно!!');
+					$('.success-message').fadeIn(350);
+					console.log(ans.object);
+
+					$(form).find('input, textarea').on('focus', function () {
+						$(form).find('.server-message').fadeOut(350);
+					});
+
+					_clearForm(form);
+				});
+		};
+		function _clearForm(form, span) {
+			$(form).find('input, textarea').val('');
+        	$(form).find('.project-upload-field').text('Загрузите изображение');
+
+			if ($(form).find('.capcha').length) {
+				capcha.reset();
+				form.trigger('reset');
+				$('.input').removeClass('field-error').trigger('reset');
+			}
+		};
+		function publicMethod() {};
+	})();
+
+/*
+ * * * POPUP УПРАВЛЕНИЕ
+ */
+(function() {
+	var popup;
+
+		publicMethod();
+		init();
+		attachEvents();
 	
-// 	// Иниализация функции.
-// 	clearForm();
+	function init() {};
+	
+	function attachEvents() {
+		$("[data-popup-open]").on('click', showPopup);
+		 $('.popup').on('mouseup', closePopup);
+	};
+	function showPopup  (ev){
+		ev.preventDefault();  
+		var targeted_popup_class = $(this).attr('data-popup-open');
+	    $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
 
-// 	// Валидация формы добавления работы в портфолио, плагин http://jqueryvalidation.org/.
-// 	$("#portfolio_form").validate({
-// 		messages: {
-// 			portfolio_form_name: "Введите название",
-// 			portfolio_form_url: "Введите ссылку",
-// 			portfolio_form_descr: "Введите описание",
-			
-// 		},
-// 		invalidHandler: function(event, validator) { // Сообщение об ошибке в верхней части формы при наличии ошибок ввода формы.
-// 			var errors = validator.numberOfInvalids();
-// 			if (errors) {
-// 				$(".add_proj_error").show();
-// 			} else {
-// 				$(".add_proj_error").hide();
-// 			}
-// 		}
-// 	});
+	    if (showPopup) {
+	    	$('.popup-wrapper').addClass('body-shadow');
+	    	}
+	    };
 
-// 	// Функция очистки формы добавления работы в портфолио при закрытии формы.
-// 	var clearPortfolioForm = function() {
-// 		$(".project_window_close_x").on("click", function() {
-// 			$("#portfolio_form_name").removeClass("error");
-// 			$("#portfolio_form_name").removeClass("valid");
-// 			$("#portfolio_form_name-error").remove();
-// 			$("#portfolio_form_url").removeClass("error");
-// 			$("#portfolio_form_url").removeClass("valid");
-// 			$("#portfolio_form_url-error").remove();
-// 			$("#portfolio_form_descr").removeClass("error");
-// 			$("#portfolio_form_descr").removeClass("valid");
-// 			$("#portfolio_form_descr-error").remove();
-// 			$(".add_proj_error").attr('style', '');
-// 		});
-// 	};
+	function closePopup (ev) {
+		ev.preventDefault();
+		var $target = $(ev.target);
+		if ($target.attr('class')=='popup' || $target.attr('class')=='b-close') {
+			$('.popup').fadeOut(350);
+			$('.qtip').hide();
+			$('.input').removeClass('field-error');
+			$('.error-message').text('');
+			$('.server-message').hide();
+			}
+	};
+	
+	function publicMethod() {};
+})();
 
-// 	clearPortfolioForm();
-
-// 	// Прослушка события: изменение инпута загрузки файла.
-// 	var setUpListnerFileupload = function (){
-// 		$('#fileupload').on('change', changefileUpload);
-// 	};
-
-// 	// Функция добавления имени файла в инпут "filename".
-// 	var changefileUpload = function (){
-// 		var 
-// 			input = $(this), // Инпут type="file"
-// 			name = input[0].files[0].name; // Имя загруженного файла
-// 		$('#filename').val(name) // Добавление имени в инпут "filename".
-// 	};
-
-// 	setUpListnerFileupload();
-
-// 	changefileUpload();
-
-// });	
+});

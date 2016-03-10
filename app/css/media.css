@@ -18,6 +18,9 @@
 	.container{		width: 96%;	}
 	.header-icons{		margin-right: 90px;	}
 	.nav-wrap{		display: none;	}
+	.content{
+		width: 100%;
+	}
 	.page-wrap{	
 		max-width: 100%;
 		width: 100%;	
@@ -199,6 +202,14 @@
 		width: 100%;
 		display: block;
 	}
+	.body-shadow{
+		top: 90%;
+	}
+	.qtip-content,
+	.qtip{
+		/*z-index: -20 !important;*/
+		opacity: 0 !important;
+	}
 
 }
 /* Custom, iPhone Retina */
@@ -226,7 +237,6 @@
 @media only screen and (min-width : 993px) {
 	.bottom-address{	display: none;	}
 	.container{	width: 84%;	}
-	.page-wrap{	margin: 24px 0;	}
 	.mnu-button-wrap{ display: none;}
 }
 /* Large Devices, Wide Screens */
